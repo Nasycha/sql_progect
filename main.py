@@ -2,10 +2,14 @@ from random import choice
 import sys
 from main_database import Database
 from main_redact import Redact
-from PyQt5 import uic
+from PyQt5 import uic, QtGui
 from PyQt5.QtCore import QTimer
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtGui import QFontDatabase
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
 
 
 class MyWidget(QMainWindow):
@@ -17,7 +21,8 @@ class MyWidget(QMainWindow):
         # self.count = 0
 
         # изображение
-        self.pixmap = QPixmap("bloodthirsty_progect_one.jpeg.crdownload")
+
+        self.pixmap = QPixmap("imgs/pixil-frame-0.png")
         self.image = QLabel(self)
         self.image.move(270, 350)
         self.image.resize(200, 200)
@@ -175,6 +180,7 @@ class MyWidget(QMainWindow):
                     ds = word[:self.l]
                     self.textBrowser_show_word.setHtml(
                         '<font color=gray>' + ds + '</font><font color=black>' + word[self.l:] + '</font>')
+
                     if self.l == len(self.text):
                         self.guessed = self.label_score.text()
                         self.label_score.setText(f'{int(self.guessed) + 1}')
