@@ -14,3 +14,10 @@
 3. `pip install -r requirements.txt`
 
 4. Запустите main.py
+# Запуск приложения (.exe)
+1. Скачайте последний [релиз](https://github.com/Nasycha/sql_progect/releases)
+
+2. Распакуйте .rar архив
+
+3. Запустите `main.exe`
+
